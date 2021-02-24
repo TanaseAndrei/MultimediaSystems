@@ -25,7 +25,4 @@ public class Video {
 
     @Lob
     private byte[] data;
-
-    @Column
-    private int minutes;
 }
