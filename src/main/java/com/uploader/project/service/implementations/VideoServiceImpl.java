@@ -27,6 +27,6 @@ public class VideoServiceImpl implements VideoService {
 
     @Override
     public List<Video> getVideos() {
-        return null;
+        return videoRepository.findAll();
     }
 }

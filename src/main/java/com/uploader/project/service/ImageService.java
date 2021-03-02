@@ -10,5 +10,5 @@ public interface ImageService {
 
     void saveImage(MultipartFile multipartFile) throws IOException;
 
-    List<Image> getImages();
+    List<String> getImages();
 }

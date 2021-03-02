@@ -27,6 +27,6 @@ public class AudioServiceImpl implements AudioService {
 
     @Override
     public List<Audio> getAudios() {
-        return null;
+        return audioRepository.findAll();
     }
 }

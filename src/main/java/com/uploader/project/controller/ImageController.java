@@ -3,6 +3,7 @@ package com.uploader.project.controller;
 import com.uploader.project.service.ImageService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +20,7 @@ public class ImageController {
     private final ImageService imageService;
 
     @GetMapping
-    public String getImageForm() {
+    public String getImageForm(Model model) {
         return "upload-image";
     }
 

@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 @Service
@@ -26,7 +28,13 @@ public class ImageServiceImpl implements ImageService {
     }
 
     @Override
-    public List<Image> getImages() {
-        return null;
+    public List<String> getImages() {
+        List<Image> images = imageRepository.findAll();
+        List<String> converted = new ArrayList<>();
+        for(Image image : images) {
+            converted.add(Base64.getMimeEncoder().encodeToString(image.getData()));
+        }
+
+        return converted;
     }
 }
