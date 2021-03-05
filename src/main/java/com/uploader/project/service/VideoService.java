@@ -10,5 +10,5 @@ public interface VideoService {
 
     void saveVideo(MultipartFile multipartFile) throws IOException;
 
-    List<Video> getVideos();
+    List<String> getVideos();
 }

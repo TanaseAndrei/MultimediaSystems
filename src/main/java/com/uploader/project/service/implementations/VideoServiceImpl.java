@@ -1,5 +1,6 @@
 package com.uploader.project.service.implementations;
 
+import com.uploader.project.model.Image;
 import com.uploader.project.model.Video;
 import com.uploader.project.repository.VideoRepository;
 import com.uploader.project.service.VideoService;
@@ -8,6 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 @Service
@@ -26,7 +29,13 @@ public class VideoServiceImpl implements VideoService {
     }
 
     @Override
-    public List<Video> getVideos() {
-        return videoRepository.findAll();
+    public List<String> getVideos() {
+        List<Video> videos = videoRepository.findAll();
+        List<String> converted = new ArrayList<>();
+        for(Video video : videos) {
+            converted.add(Base64.getMimeEncoder().encodeToString(video.getData()));
+        }
+
+        return converted;
     }
 }

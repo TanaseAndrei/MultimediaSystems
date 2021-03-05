@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=9">
+    <meta name="description" content="Gambolthemes">
+    <meta name="author" content="Gambolthemes">
+    <title>Cursus - Index</title>
+
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="images/fav.png">
+
+    <!-- Stylesheets -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet'>
+    <link th:href="@{vendor/unicons-2.0.1/css/unicons.css}" rel="stylesheet">
+    <link th:href="@{css/vertical-responsive-menu.min.css}" rel="stylesheet">
+    <link th:href="@{css/style.css}" rel="stylesheet">
+    <link th:href="@{css/responsive.css}" rel="stylesheet">
+    <link th:href="@{css/night-mode.css}" rel="stylesheet">
+
+    <!-- Vendor Stylesheets -->
+    <link th:href="@{vendor/fontawesome-free/css/all.min.css}" rel="stylesheet">
+    <link th:href="@{vendor/OwlCarousel/assets/owl.carousel.css}" rel="stylesheet">
+    <link th:href="@{vendor/OwlCarousel/assets/owl.theme.default.min.css}" rel="stylesheet">
+    <link th:href="@{vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{vendor/semantic/semantic.min.css}">
+
+</head>
+
+<body>
+<nav th:fragment="left-bar" class="vertical_nav">
+    <div class="left_section menu_left" id="js-menu">
+        <div class="left_section">
+            <ul>
+                <li class="menu--item">
+                    <a href="../index.html" class="menu--link active" title="Home">
+                        <i class='uil uil-home-alt menu--icon'></i>
+                        <span class="menu--label">Home</span>
+                    </a>
+                </li>
+                <li class="menu--item menu--item__has_sub_menu">
+                    <label class="menu--link" title="Categories">
+                        <i class='uil uil-layers menu--icon'></i>
+                        <span class="menu--label">Categories</span>
+                    </label>
+                    <ul class="sub_menu">
+                        <li class="sub_menu--item">
+                            <a th:href="@{/image}" class="sub_menu--link">Upload image</a>
+                        </li>
+                        <li class="sub_menu--item">
+                            <a th:href="@{/video}" class="sub_menu--link">Upload video</a>
+                        </li>
+                        <li class="sub_menu--item">
+                            <a th:href="@{/audio}" class="sub_menu--link">Upload audio</a>
+                        </li>
+                        <li class="sub_menu--item">
+                            <a th:href="@{/contact}" class="sub_menu--link">Contact</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</body>
+</html>

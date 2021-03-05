@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=9">
+    <meta name="description" content="Gambolthemes">
+    <meta name="author" content="Gambolthemes">
+    <title>Drop.io</title>
+
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="images/fav.png">
+
+    <!-- Stylesheets -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet'>
+    <link th:href="@{vendor/unicons-2.0.1/css/unicons.css}" rel="stylesheet">
+    <link th:href="@{css/vertical-responsive-menu.min.css}" rel="stylesheet">
+    <link th:href="@{css/style.css}" rel="stylesheet">
+    <link th:href="@{css/responsive.css}" rel="stylesheet">
+    <link th:href="@{css/night-mode.css}" rel="stylesheet">
+
+    <!-- Vendor Stylesheets -->
+    <link th:href="@{vendor/fontawesome-free/css/all.min.css}" rel="stylesheet">
+    <link th:href="@{vendor/OwlCarousel/assets/owl.carousel.css}" rel="stylesheet">
+    <link th:href="@{vendor/OwlCarousel/assets/owl.theme.default.min.css}" rel="stylesheet">
+    <link th:href="@{vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{vendor/semantic/semantic.min.css}">
+
+</head>
+
+<body>
+<!-- Header Start -->
+<header th:fragment="header" class="header clearfix">
+    <button type="button" id="toggleMenu" class="toggle_menu">
+        <i class='uil uil-bars'></i>
+    </button>
+    <button id="collapse_menu" class="collapse_menu">
+        <i class="uil uil-bars collapse_menu--icon "></i>
+        <span class="collapse_menu--label"></span>
+    </button>
+    <div class="main_logo" id="logo">
+        <a th:href="@{/}">HOME</a>
+    </div>
+    <div class="top-category">
+        <div class="ui compact menu cate-dpdwn">
+            <div class="ui simple dropdown item">
+                <a href="#" class="option_links p-0" title="categories"><i class="uil uil-apps"></i></a>
+                <div class="menu dropdown_category5">
+                    <a th:href="@{/image}" class="item channel_item">Upload image</a>
+                    <a th:href="@{/video}" class="item channel_item">Upload video</a>
+                    <a th:href="@{/audio}" class="item channel_item">Upload audio</a>
+                    <a th:href="@{/contact}" class="item channel_item">Contact us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+</body>
+</html>

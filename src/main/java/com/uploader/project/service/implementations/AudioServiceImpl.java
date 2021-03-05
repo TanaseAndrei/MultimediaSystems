@@ -1,6 +1,7 @@
 package com.uploader.project.service.implementations;
 
 import com.uploader.project.model.Audio;
+import com.uploader.project.model.Video;
 import com.uploader.project.repository.AudioRepository;
 import com.uploader.project.service.AudioService;
 import lombok.AllArgsConstructor;
@@ -8,6 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 @Service
@@ -26,7 +29,13 @@ public class AudioServiceImpl implements AudioService {
     }
 
     @Override
-    public List<Audio> getAudios() {
-        return audioRepository.findAll();
+    public List<String> getAudios() {
+        List<Audio> audios = audioRepository.findAll();
+        List<String> converted = new ArrayList<>();
+        for(Audio audio : audios) {
+            converted.add(Base64.getMimeEncoder().encodeToString(audio.getData()));
+        }
+
+        return converted;
     }
 }
