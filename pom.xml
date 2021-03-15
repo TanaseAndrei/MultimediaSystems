@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.uploader</groupId>
     <artifactId>project</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1</version>
     <name>project</name>
     <description>Simple application where you can upload videos, audios and pictures</description>
     <properties>
