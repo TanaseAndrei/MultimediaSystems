@@ -8037,3 +8037,36 @@ a.rmv-btn i {
     right: 13px;
     position: absolute;
 }
+
+.banner {
+    height: auto;
+    width: 100%;
+    background:url(https://media.giphy.com/media/cmegx6SssTKmEFEcwj/giphy.gif);
+    background-size: cover;
+    object-fit: cover;
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    padding: 40px 15px;
+}
+
+.big-text {
+    font-size: 130px;
+    margin: 50px;
+    font-weight:800;
+    animation-delay: 1s;
+}
+.banner a {
+    display: inline-block;
+    color: #36465d;
+    text-transform: uppercase;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 40px;
+    transition: .3s;
+}
+.banner a:hover {
+    background: #333;
+    color: #fff;
+    padding: 15px 20px;
+}

@@ -47,7 +47,7 @@
                     <div class="la5lo1">
                         <div class="owl-carousel featured_courses owl-theme">
                             <div class="item" th:each="image : ${images}">
-                                <div style="height: 500px; width: 250px;" class="fcrse_1 mb-20">
+                                <div style="height: auto; width: 250px;" class="fcrse_1 mb-20">
                                     <img th:src="${'data:image/jpeg;base64,' + image}"/>
                                 </div>
                             </div>
@@ -59,10 +59,12 @@
                     <div class="la5lo1">
                         <div class="owl-carousel featured_courses owl-theme">
                             <div class="item" th:each="video : ${videos}">
-                                <video controls>
-                                    <source type="video/webm" th:src="${'data:video/webm;base64,' + video}"/>
-                                    <source type="video/mp4" th:src="${'data:video/mp4;base64,' + video}"/>
-                                </video>
+                                <div style="height: auto; width: 500px" class="fcrse_1 mb-20">
+                                    <video controls>
+                                        <source type="video/webm" th:src="${'data:video/webm;base64,' + video}"/>
+                                        <source type="video/mp4" th:src="${'data:video/mp4;base64,' + video}"/>
+                                    </video>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -79,6 +81,12 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="section3125 mt-50">
+                    <div class="banner">
+                        <div class=" big-text">Want more space?</div>
+                        <a th:href="@{/contact}">Contact us for more informations</a>
                     </div>
                 </div>
             </div>
